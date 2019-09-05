@@ -1,13 +1,14 @@
 ## Project Setup
 
-- Choose an [archetype version](https://github.com/adobe/aem-project-archetype/releases) as per your local environment, then paste the following command [in your preferred CLI] to initiate the creation of new project.
+- Paste the following command [in your preferred CLI] to initiate the creation of new project.
   
   > ```Assembly
-  > mvn archetype:generate \
+  > mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate \
   > -DarchetypeGroupId=com.adobe.granite.archetypes \
   > -DarchetypeArtifactId=aem-project-archetype \
-  > -DarchetypeVersion=<ARCHETYPE_VERSION>
-  
+  > -DarchetypeVersion=13 \
+  > -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
+
 - CLI will ask series of questions to setup the project:
   > ```Assembly
   > Define value for property 'groupId':
@@ -25,7 +26,7 @@
 
 - Folder and File structure will be generated as below:  
   > ```Assembly
-  > ├── <artifactId>
+  > ├── <artifactName>
   >     ├── core/
   >     ├── it.launcher/
   >     ├── it.tests/
@@ -41,3 +42,17 @@
   - __ui.apps__: contains `/apps` part of the project, ie. components, client libraries, templates, etc.
   - __ui.content__: contains structural content (/content)
   
+## Maven Profile
+
+<dl>
+  <dt>mvn clean</dt>
+  <dd></dd>
+  <dt>mvn clean install</dt>
+  <dd></dd>
+  <dt>mvn clean install -PautoInstallPackage</dt>
+  <dd></dd>
+  <dt>mvn clean install -PautoInstallContent</dt>
+  <dd></dd>
+  <dt>mvn clean install -PautoInstallPackagePublish</dt>
+  <dd></dd>
+</dl>
