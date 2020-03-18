@@ -6,17 +6,15 @@ Git is most widely used version control system. In my point of view, every devel
   <dt>git config</dt>
   <dd>The first thing you should configure your identity: email and name. You can configure your identiy either for all repositories of your computer or for a single repository. To configure identity for single repository, use the following command:
     
-  ```bash
-  git config user.email "Your Email Address"
-  git config user.name "Your User Name"
-  ```
+  > ```Assembly
+  > git config user.email "Your Email Address"
+  > git config user.name "Your User Name"
   
   To configure identity for all repositories, You just need to add `--global` after `git config` like
   
-  ```bash
-  git config --global user.email "Your Email Address"
-  git config --global user.name "Your User Name"
-  ```
+  > ```Assembly
+  > git config --global user.email "Your Email Address"
+  > git config --global user.name "Your User Name"
   
   You can even check your configuration settings, you need to use the `git config --list` command to view the settings for the current repository. You can also retrieve a single configuration using the the `git config user.name` command. To view the global configuration, you need to add `--global` after `git config`.
   </dd>
@@ -26,34 +24,29 @@ Git is most widely used version control system. In my point of view, every devel
   <dt>git clone</dt>
   <dd>It create a local copy of a Git repository on your computer. Use the following command to clone a repository:
 
-  ```bash
-  git clone https://github.com/<USERNAME>/<REPOSITORY>.git
-  ```
+  > ```Assembly
+  > git clone https://github.com/<USERNAME>/<REPOSITORY>.git
 
   The above command will clone `master` branch of the repository. It is also possible to specificy a branch name when clone a repository like
   
-  ```bash
-  git clone -b <BRANCH> https://github.com/<USERNAME>/<REPOSITORY>.git
-  ```
+  > ```Assembly
+  > git clone -b <BRANCH> https://github.com/<USERNAME>/<REPOSITORY>.git
   </dd>
   <dt>git tag</dt>
   <dd>To cretae a tag, run this command.
 
-  ```bash
-  git tag <VERSION>
-  ```
+  > ```Assembly
+  > git tag <VERSION>
   
   To include description with your tag, run the following command.
 
-  ```bash
-  git tag -a <VERSION> -m "<MESSAGE>"
-  ```
+  > ```Assembly
+  > git tag -a <VERSION> -m "<MESSAGE>"
 
   To push the tag(s) to remote, use the following command.
 
-  ```bash
-  git push origin <VERSION> # to push a single tag
-  git push origin --tags # to push all tags
-  ```
+  > ```Assembly
+  > git push origin <VERSION> # to push a single tag
+  > git push origin --tags # to push all tags`
   </dd>
 </dl>
