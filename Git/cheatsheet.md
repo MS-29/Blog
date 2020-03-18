@@ -36,4 +36,24 @@ Git is most widely used version control system. In my point of view, every devel
   git clone -b <BRANCH> https://github.com/<USERNAME>/<REPOSITORY>.git
   ```
   </dd>
+  <dt>git tag</dt>
+  <dd>To cretae a tag, run this command.
+
+  ```bash
+  git tag <VERSION>
+  ```
+  
+  To include description with your tag, run the following command.
+
+  ```bash
+  git tag -a <VERSION> -m "<MESSAGE>"
+  ```
+
+  To push the tag(s) to remote, use the following command.
+
+  ```bash
+  git push origin <VERSION> # to push a single tag
+  git push origin --tags # to push all tags
+  ```
+  </dd>
 </dl>
