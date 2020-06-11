@@ -45,6 +45,27 @@
 - Build your Project
   - `npm run build` or `yarn build`
 - Deploy your Project
+  - Make sure you have `server.js` file on your root directory
+    ```javascript
+      const express = require("express");
+      const path = require("path");
+
+      const app = express();
+
+      app.use(
+        express.static(path.join(__dirname, "build"))
+      );
+
+      app.get("/*", function(request, response) {
+        response.sendFile(path.join(__dirname, "build", "index.html"));
+      });
+
+      const port = process.env.PORT || 3000;
+
+      app.listen(port, () => {
+        console.log(`App is running at ${port}`);
+      });
+    ```
   - Add the following scripts in the package.json
     - `"deploy": "pm2 start server.js --name example --max-memory-restart 700M --node-args='--max_old_space_size=500'"`
   - `npm run deploy` or `yarn deploy`
