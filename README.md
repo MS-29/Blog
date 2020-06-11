@@ -1,7 +1,5 @@
 ## Blog
 
-__Topics__
--------------------------------------------
 - [Adobe Experience Manager][1]
 - [Algorithm][2]
 - [Amazon Web Service][3]
