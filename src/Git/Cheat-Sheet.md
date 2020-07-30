@@ -32,6 +32,17 @@ Git is most widely used version control system. In my point of view, every devel
   > ```Assembly
   > git clone -b <BRANCH> https://github.com/<USERNAME>/<REPOSITORY>.git
   </dd>
+  <dt>git branch</dt>
+  <dd>To delete a local branch, run this command
+  
+  > ```Assembly
+  > git branch -D <BRANCH_NAME>
+
+  To rename a local branch, run the following command.
+
+  > ```Assembly
+  > git branch -m <NEW_BRANCH_NAME>
+  </dd>
   <dt>git tag</dt>
   <dd>To cretae a tag, run this command.
 
