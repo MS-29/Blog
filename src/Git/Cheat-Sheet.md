@@ -48,6 +48,11 @@ Git is most widely used version control system. In my point of view, every devel
 
   > ```Assembly
   > git tag <VERSION>
+
+  To create tag on old commit, run the following commans.
+
+  > ```Assembly
+  > git tag <VERSION> <COMMIT_NO>
   
   To include description with your tag, run the following command.
 
